@@ -92,18 +92,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "host-app:build"
+            "buildTarget": "host-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "host-app:build:production"
+              "buildTarget": "host-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "host-app:build"
+            "buildTarget": "host-app:build"
           }
         },
         "server": {
@@ -133,7 +133,7 @@
           "defaultConfiguration": ""
         },
         "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "options": {
             "browserTarget": "host-app:build",
             "serverTarget": "host-app:server"
@@ -146,7 +146,7 @@
           }
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "browserTarget": "host-app:build:production",
             "serverTarget": "host-app:server:production",
